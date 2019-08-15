@@ -1,14 +1,17 @@
-var food = parseInt($("#food").val());
-var music = parseInt($("#music").val());
-var brand = parseInt($("#brand").val());
-var member = parseInt($("#member").val());
-var score = food + music + brand + member ;
-function reset(){
-   var score = 0;
-  }
+// var food = parseInt($("#food").val());
+// var music = parseInt($("#music").val());
+// var brand = parseInt($("#brand").val());
+// var member = parseInt($("#member").val());
+// var score = food + music + brand + member ;
+// function reset(){
+//    var score = 0;
+//   }
 //   function tryAgain(){
 //
 //   }
+function reload(){
+  window.reload();
+}
 
 $(document).ready(function(){
   $("#formOne").submit(function(event){
@@ -25,7 +28,7 @@ $(document).ready(function(){
       $("#kawhi").hide();
       $("#lebron").hide();
       $("#steph").hide();
-      
+
     } else if (score === 4 ) {
       $("#kevin").hide();
       $("#lebron").hide();
