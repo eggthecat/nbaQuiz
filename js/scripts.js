@@ -57,7 +57,7 @@ $(document).ready(function(){
 
     };
     console.log(score)
-    $(".field").val(0);
+    
     console.log(score)
   });
 
