@@ -10,12 +10,14 @@
 //
 //   }
 function reload(){
-  window.reload();
+  $(".field").val(0);
+  $(".players").hide()
 }
 
 $(document).ready(function(){
   $("#formOne").submit(function(event){
     event.preventDefault()
+    $(".players").hide()
     var food = parseInt($("#food").val());
     var music = parseInt($("#music").val());
     var brand = parseInt($("#brand").val());
@@ -55,7 +57,7 @@ $(document).ready(function(){
 
     };
     console.log(score)
-    reset();
+    $(".field").val(0);
     console.log(score)
   });
 
