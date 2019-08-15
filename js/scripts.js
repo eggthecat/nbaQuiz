@@ -1,3 +1,15 @@
+var food = parseInt($("#food").val());
+var music = parseInt($("#music").val());
+var brand = parseInt($("#brand").val());
+var member = parseInt($("#member").val());
+var score = food + music + brand + member ;
+function reset(){
+   var score = 0;
+  }
+//   function tryAgain(){
+//
+//   }
+
 $(document).ready(function(){
   $("#formOne").submit(function(event){
     event.preventDefault()
@@ -8,30 +20,40 @@ $(document).ready(function(){
 
     var score = food + music + brand + member ;
 
-    if (score < 5 ) {
-      alert("#kawhi").show();
+    if (score < 4) {
+      $("#kevin").hide();
+      $("#kawhi").hide();
+      $("#lebron").hide();
+      $("#steph").hide();
+      
+    } else if (score === 4 ) {
       $("#kevin").hide();
       $("#lebron").hide();
       $("#steph").hide();
-    } else if (5 < score > 10) {
+      $("#kawhi").show();
+
+    } else if (score >= 5 && score < 9) {
       $("#kawhi").hide();
-      $("#kevin").hide();
-      alert("#lebron").show();
-      $("#steph").hide();
-    } else if (10 <score > 15) {
-      $("#kawhi").hide();
-      $("#kevin").hide();
-      $("#lebron").hide();
-      alert("#steph").show();
-    } else  {
-      $("#kawhi").hide();
-      alert("#kevin").show();
       $("#lebron").hide();
       $("#steph").hide();
+      $("#kevin").show();
+
+    } else if (score >= 9 && score <= 13) {
+      $("#kevin").hide();
+      $("#kawhi").hide();
+      $("#steph").hide();
+      $("#lebron").show();
+
+    } else if (score >= 14 && score < 17)  {
+      $("#kevin").hide();
+      $("#kawhi").hide();
+      $("#lebron").hide();
+      $("#steph").show();
+
     };
-    console.log(food);
-    console.log(music);
-    console.log(brand);
-    console.log(member);
+    console.log(score)
+    reset();
+    console.log(score)
   });
+
 });
