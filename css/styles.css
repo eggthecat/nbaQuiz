@@ -19,3 +19,38 @@ button {
 #kawhi{
   display: none;
 }
+
+body  {
+  /* background-image: url("../img/grn.png"); */
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.jumbotron {
+  background-color: crimson;
+  color: chartreuse;
+  font-size: 30px;
+}
+
+.field {
+  color:darkslateblue;
+  background-color: deeppink;
+  font-size: 20px;
+}
+h1 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
